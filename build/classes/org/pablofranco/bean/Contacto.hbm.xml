@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.pablofranco.bean.Contacto" table="CONTACTO">
+	
+	    <id name="idContacto" type="java.lang.Integer">
+            <column name="IDCONTACTO" />
+            <generator class="sequence-identity" >
+            	<param name="sequence">CONTACTO_SEQ</param>
+            </generator>
+        </id>
+        
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="apellido" type="java.lang.String">
+            <column name="APELLIDO" />
+        </property>
+        <property name="telefonoCasa" type="java.lang.Integer">
+            <column name="TELEFONOCASA" />
+        </property>
+        <property name="telefonoCelular" type="java.lang.Integer">
+            <column name="TELEFONOCELULAR" />
+        </property>
+        <property name="correo" type="java.lang.String">
+            <column name="CORREO" />
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="DIRECCION" />
+        </property>
+
+
+	</class>
+</hibernate-mapping>
